@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 70
-  turnSpeed: 0.1
+  turnSpeed: 0.01
   monsterRB: {fileID: 6481886069964100625}
 --- !u!54 &6481886069964100625
 Rigidbody:

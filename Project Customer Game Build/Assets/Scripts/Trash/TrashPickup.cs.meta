@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7a23b613435e3334f913c5800318b9da
+labels:
+- Collision
+- Pickup
+- Trash
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
