@@ -1,2 +1,2 @@
 Project Customer Game Build
-Testing github
+Year 2 CMGT Project Customer (2020) game prototype build.
