@@ -13,13 +13,16 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {       
     }
-
+    
     void FixedUpdate()
     {
         SetKeys();
         MovePlayer();
     }
 
+    /// <summary>
+    /// Sets the velocity of the player using the input float values.
+    /// </summary>
     void MovePlayer()
     {
         Vector3 zVelocity = transform.forward * forward;
@@ -28,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
         playerRB.velocity = new Vector3(horizontalVelocity.x, playerRB.velocity.y, horizontalVelocity.z);
     }
 
+    /// <summary>
+    /// Assings input values to floats.
+    /// </summary>
     void SetKeys()
     {
         forward = Input.GetAxis("Vertical");

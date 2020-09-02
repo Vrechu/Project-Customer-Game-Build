@@ -25,11 +25,17 @@ public class MonsterMovement : MonoBehaviour
         TurnToPlayer();
     }
 
+    /// <summary>
+    /// Sets the velocity of the monster to the direction he is facing. 
+    /// </summary>
     void MoveMonster()
     {
         monsterRB.velocity = transform.forward * movementSpeed * Time.fixedDeltaTime;
     }
 
+    /// <summary>
+    /// Sets the lookRotation to face the player.
+    /// </summary>
     void TrackPlayerDirection()
     {
         relativePlayerDirection = player.position - transform.position;
@@ -37,6 +43,9 @@ public class MonsterMovement : MonoBehaviour
         lookRotation = Quaternion.Euler(0, playerFacingRotation.eulerAngles.y, 0);
     }
 
+    /// <summary>
+    /// Gradually rotates the transform rotation of the monster in the direction of the lookRotation.
+    /// </summary>
     void TurnToPlayer()
     {
         lookRotation = Quaternion.Lerp(transform.rotation, lookRotation, turnSpeed);
