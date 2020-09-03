@@ -15,14 +15,18 @@ public class MonsterMovement : MonoBehaviour
 
     void Start()
     {
+        if (ManageScenes.DoesSceneHavePlayer() != false)
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void FixedUpdate()
     {
-        MoveMonster();
-        TrackPlayerDirection();
-        TurnToPlayer();
+        if (ManageScenes.DoesSceneHavePlayer() != false)
+        {
+            MoveMonster();
+            TrackPlayerDirection();
+            TurnToPlayer();
+        }
     }
 
     /// <summary>
