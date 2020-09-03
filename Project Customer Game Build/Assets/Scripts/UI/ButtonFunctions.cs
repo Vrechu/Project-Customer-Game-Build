@@ -24,6 +24,10 @@ public class ButtonFunctions : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Calls the loadScene method from the scene manager.
+    /// </summary>
+    /// <param name="sceneName"></param>
     public void LoadScene(string sceneName)
     {
         ManageScenes.LoadScene(sceneName);

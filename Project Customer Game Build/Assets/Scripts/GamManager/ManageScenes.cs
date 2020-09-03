@@ -23,6 +23,10 @@ public class ManageScenes : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Loads new scene.
+    /// </summary>
+    /// <param name="sceneName"></param>
     public static void LoadScene(String sceneName)
     {
         SceneManager.LoadScene(sceneName);
