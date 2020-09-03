@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class TrashPickup : MonoBehaviour
 {
-    public static event Action OnPickupByPlayer;
+    public int scoreWorth = 10;
+
+    public static event Action<float> OnPickupByPlayer;
+    
+
     public static event Action OnPickupByMonster;
 
     void Start()
@@ -37,7 +41,7 @@ public class TrashPickup : MonoBehaviour
     {
         if (tag == "Player")
         {
-            OnPickupByPlayer?.Invoke();
+            OnPickupByPlayer?.Invoke(scoreWorth);
         }
         if (tag == "Monster")
         {

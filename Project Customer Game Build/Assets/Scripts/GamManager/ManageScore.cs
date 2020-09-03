@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ManageScore : MonoBehaviour
 {
-    public int score = 0;
+    public float score = 0;
+    
 
     void Awake()
     {
@@ -30,9 +31,9 @@ public class ManageScore : MonoBehaviour
     /// <summary>
     /// Adds a point to the score.
     /// </summary>
-    void AddScore()
+    void AddScore(float scoreWorth)
     {
-        score++;
+        score += scoreWorth; 
         Debug.Log("Score: " + score);
     }
 }

@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36223c2a2c72c041a8175ac6e7bfba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 400
   rotationSpeed: 10
   playerRB: {fileID: 5433987043296892924}
 --- !u!54 &5433987043296892924
@@ -211,7 +211,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!1 &2631500652906914724
 GameObject:
@@ -224,7 +224,6 @@ GameObject:
   - component: {fileID: 8836322478482320875}
   - component: {fileID: 3568002768770119306}
   - component: {fileID: 5411584061034442805}
-  - component: {fileID: 1096191738326450334}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -295,16 +294,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1096191738326450334
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2631500652906914724}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
