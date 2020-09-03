@@ -27,6 +27,10 @@ public class ManageHealth : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Removes from health depeding on the damage amount.
+    /// </summary>
+    /// <param name="damage"></param>
     void LoseHealth(float damage)
     {
         health -= damage;

@@ -19,6 +19,10 @@ public class GetHit : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// When player collides with trigger run push and event methods.
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -29,12 +33,18 @@ public class GetHit : MonoBehaviour
         Debug.Log(other.tag);
     }
     
-
+    /// <summary>
+    /// Sends out the OnPlayerHit event.
+    /// </summary>
     void SendOutEvent()
     {
             OnPLayerHit?.Invoke(damage);
     }
 
+    /// <summary>
+    /// Pushes the player back from the monster.
+    /// </summary>
+    /// <param name="other"></param>
     void PushPlayer(Collider other)
     {
         Vector3 relativePlayerPosition = -transform.position;

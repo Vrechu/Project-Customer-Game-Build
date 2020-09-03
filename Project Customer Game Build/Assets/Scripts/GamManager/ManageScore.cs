@@ -7,7 +7,7 @@ public class ManageScore : MonoBehaviour
 {
     public float score = 0;
     
-
+    
     void Awake()
     {
         TrashPickup.OnPickupByPlayer += AddScore;
