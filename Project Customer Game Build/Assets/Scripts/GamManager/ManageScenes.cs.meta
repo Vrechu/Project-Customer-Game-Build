@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 39c53810dd0d3d84bb2cd89bd4e3a7d5
+guid: 98c38f1d22ec55542b25e818af4a7542
 labels:
-- Monster
-- Movement
+- Manager
+- Scene
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
-  icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
