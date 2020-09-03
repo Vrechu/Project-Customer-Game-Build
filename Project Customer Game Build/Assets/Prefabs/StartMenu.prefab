@@ -201,7 +201,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 277948277623250766}
         m_TargetAssemblyTypeName: ButtonFunctions, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 277948277623250754}
   - component: {fileID: 277948277623250766}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: StartMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

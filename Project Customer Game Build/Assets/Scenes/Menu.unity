@@ -371,6 +371,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 277948276157402881, guid: 69f31fc37c743ce49a9d6fb291cd3b06, type: 3}
+      propertyPath: m_Text
+      value: Start Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 277948276157402883, guid: 69f31fc37c743ce49a9d6fb291cd3b06, type: 3}
+      propertyPath: m_Name
+      value: Text
+      objectReference: {fileID: 0}
     - target: {fileID: 277948277623250753, guid: 69f31fc37c743ce49a9d6fb291cd3b06, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

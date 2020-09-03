@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void TurnPlayer()
     {
-        yAngle = yAngle + sideways;
+        yAngle += sideways;
         transform.rotation = Quaternion.Euler(0, yAngle , 0);
     }
 

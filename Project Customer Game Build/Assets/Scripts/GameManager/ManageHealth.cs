@@ -62,6 +62,6 @@ public class ManageHealth : MonoBehaviour
     void PlayerDeath()
     {
         Debug.Log("Game Over");
-        ManageScenes.LoadScene("Menu");
+        ManageScenes.ChangeScene("Menu");
     }
 }

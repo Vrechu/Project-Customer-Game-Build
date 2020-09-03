@@ -6,7 +6,7 @@ public class ButtonFunctions : MonoBehaviour
 {
     void Awake()
     {
-        
+
     }
 
     void OnDestroy()
@@ -16,20 +16,20 @@ public class ButtonFunctions : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
 
     /// <summary>
     /// Calls the loadScene method from the scene manager.
     /// </summary>
     /// <param name="sceneName"></param>
-    public void LoadScene(string sceneName)
+    public void ChangeScene(string sceneName)
     {
-        ManageScenes.LoadScene(sceneName);
+        ManageScenes.ChangeScene(sceneName);
     }
 }
