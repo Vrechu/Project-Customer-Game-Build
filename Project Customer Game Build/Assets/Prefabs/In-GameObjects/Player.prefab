@@ -159,10 +159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36223c2a2c72c041a8175ac6e7bfba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 400
-  rotationSpeed: 10
+  normalAcceleration: 500
+  rotationSpeed: 50
   SpeedBoostEquipped: 0
-  boostSpeed: 1000
+  boostAcceleration: 1000
   playerRB: {fileID: 3330155114845172575}
 --- !u!1001 &2171101701220015836
 PrefabInstance:

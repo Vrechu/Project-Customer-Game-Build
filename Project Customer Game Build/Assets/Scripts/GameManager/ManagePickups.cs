@@ -6,10 +6,8 @@ using UnityEngine;
 public class ManagePickups : MonoBehaviour
 {
     bool isSpeedBoostPickedUp = false;
-    bool isShieldPickedUp = false;
 
     public static event Action OnSpeedBoostEquip;
-    public static event Action OnSpeedBoostUnequip;
 
     private void Awake()
     {
@@ -53,10 +51,6 @@ public class ManagePickups : MonoBehaviour
         IsSpeedBoostPickedUp = true;
     }
 
-    void UnequipSpeedBoost()
-    {
-        
-    }
 
 
 }
