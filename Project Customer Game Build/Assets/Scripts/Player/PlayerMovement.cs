@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void MovePlayer()
     {
-        playerRB.velocity = transform.forward * forward * speed * Time.fixedDeltaTime;
+        playerRB.AddForce(transform.forward * forward * speed * Time.fixedDeltaTime);
     }
 
     /// <summary>
