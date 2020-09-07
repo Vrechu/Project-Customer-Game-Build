@@ -3,14 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrashPickup : MonoBehaviour
+public class GainScoreOnPickup : MonoBehaviour
 {
     public int scoreWorth = 10;
 
-    public static event Action<float> OnPickupByPlayer;
-    
-
-    public static event Action OnPickupByMonster;
+    public static event Action<float> OnScorePickup;
 
     void Start()
     {
@@ -22,6 +19,7 @@ public class TrashPickup : MonoBehaviour
         
     }
 
+
     /// <summary>
     /// Gets called when on a collision. 
     /// Checks who the collector is and then destroys the gameObject.
@@ -29,8 +27,7 @@ public class TrashPickup : MonoBehaviour
     /// <param name="other"></param>
     void OnTriggerEnter(Collider other)
     {
-        CheckCollector(other.tag);
-        Destroy(gameObject);
+        CheckCollector(other.tag);        
     }
 
     /// <summary>
@@ -41,11 +38,7 @@ public class TrashPickup : MonoBehaviour
     {
         if (tag == "Player")
         {
-            OnPickupByPlayer?.Invoke(scoreWorth);
-        }
-        if (tag == "Monster")
-        {
-           OnPickupByMonster?.Invoke();
+            OnScorePickup?.Invoke(scoreWorth);
         }
     }
 }

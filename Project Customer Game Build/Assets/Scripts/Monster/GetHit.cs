@@ -30,7 +30,6 @@ public class GetHit : MonoBehaviour
             PushPlayer(other);
             SendOutEvent();
         }
-        Debug.Log(other.tag);
     }
     
     /// <summary>

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5192296034667748018}
   - component: {fileID: 6007338414420655338}
   - component: {fileID: 6351300137482649483}
+  - component: {fileID: 1511457650757080276}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Untagged
@@ -60,6 +61,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreWorth: 10
+--- !u!114 &1511457650757080276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3130831600546612586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 363852e5b325fec4f984fcc600de981b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &248771026590928328
 PrefabInstance:
   m_ObjectHideFlags: 0

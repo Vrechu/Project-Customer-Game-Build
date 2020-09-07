@@ -10,18 +10,22 @@ public class ManageHealth : MonoBehaviour
     public static event Action OnHealthChange;
     public static event Action OnPlayerDeath;
 
+    public bool IsPlayerShielded = false;
+
     private void Awake()
     {
         OnHealthChange += CheckHealth;
         OnPlayerDeath += PlayerDeath;
-        GetHit.OnPLayerHit += LoseHealth;
+        GetHit.OnPLayerHit += CheckIfShielded;
+        GainShieldOnPickup.OnShieldPickup += AddShield;
     }
 
     private void OnDestroy()
     {
         OnHealthChange -= CheckHealth;
-        OnPlayerDeath += PlayerDeath;
-        GetHit.OnPLayerHit -= LoseHealth;
+        OnPlayerDeath -= PlayerDeath;
+        GetHit.OnPLayerHit -= CheckIfShielded;
+        GainShieldOnPickup.OnShieldPickup -= AddShield;
     }
 
     void Start()
@@ -35,12 +39,48 @@ public class ManageHealth : MonoBehaviour
     }
 
     /// <summary>
+    /// Checks Subtracks the damage from playerhealth if not shielded. Removes the shield if shielded.
+    /// </summary>
+    /// <param name="damage"></param>
+    void CheckIfShielded(float damage)
+    {
+        if (!IsPlayerShielded)
+        {
+            LoseHealth(damage);
+        }
+        else if (IsPlayerShielded)
+        {
+            LoseShield();
+        }
+    }
+
+    /// <summary>
+    /// Sets IsPLayerShielded to true.
+    /// </summary>
+    void AddShield()
+    {
+        IsPlayerShielded = true;
+        Debug.Log("SHIELDED");
+    }
+
+    /// <summary>
+    /// Sets IsPLayerShielded to false.
+    /// </summary>
+    void LoseShield()
+    {
+        IsPlayerShielded = false;
+        Debug.Log("SHIELD LOST");
+    }
+
+    /// <summary>
     /// Removes from health depeding on the damage amount.
     /// </summary>
     /// <param name="damage"></param>
     void LoseHealth(float damage)
     {
-        health -= damage;
+        
+            health -= damage;
+        
         OnHealthChange?.Invoke();
     }
 

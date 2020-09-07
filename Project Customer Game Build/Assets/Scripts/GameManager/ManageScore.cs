@@ -13,13 +13,13 @@ public class ManageScore : MonoBehaviour
     void Awake()
     {
         OnScoreChange += CheckScore;
-        TrashPickup.OnPickupByPlayer += AddScore;
+        GainScoreOnPickup.OnScorePickup += AddScore;
     }
 
     void OnDestroy()
     {
         OnScoreChange -= CheckScore;
-        TrashPickup.OnPickupByPlayer -= AddScore;
+        GainScoreOnPickup.OnScorePickup -= AddScore;
     }
 
     void Start()
@@ -33,7 +33,7 @@ public class ManageScore : MonoBehaviour
     }
 
     /// <summary>
-    /// Adds a point to the score.
+    /// Adds points to the current score.
     /// </summary>
     void AddScore(float scoreWorth)
     {
