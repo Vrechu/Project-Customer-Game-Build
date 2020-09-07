@@ -24,10 +24,12 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         ManagePickups.OnSpeedBoostEquip += EquipSpeedBoost;
+        ManagePickups.OnSpeedBoostUnequip += UnequipSpeedBoost;
     }
     private void OnDestroy()
     {
         ManagePickups.OnSpeedBoostEquip -= EquipSpeedBoost;
+        ManagePickups.OnSpeedBoostUnequip -= UnequipSpeedBoost;
     }
 
     void Start()
@@ -85,6 +87,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /// <summary>
+    /// Unequips the speedboost.
+    /// </summary>
+    void UnequipSpeedBoost()
+    {
+        SpeedBoostEquipped = false;
+    }
+
+    /// <summary>
     /// Determines the speed of the player.
     /// </summary>
     void ManageSpeed()
@@ -92,12 +102,17 @@ public class PlayerMovement : MonoBehaviour
         if (SpeedBoostEquipped)
         {
             if (boost == 1)
+            {
                 acceleration = boostAcceleration;
+                ManagePickups.LoseBoost();
+            }
             else if (boost == 0)
             {
                 acceleration = normalAcceleration;
             }
         }
+        else if (!SpeedBoostEquipped)
+            acceleration = normalAcceleration;
     }
     
 }
