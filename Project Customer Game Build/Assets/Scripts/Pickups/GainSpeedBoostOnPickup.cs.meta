@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e3917d3b866145f418456fc4253b47be
+labels:
+- Collision
+- Movement
+- Pickup
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
