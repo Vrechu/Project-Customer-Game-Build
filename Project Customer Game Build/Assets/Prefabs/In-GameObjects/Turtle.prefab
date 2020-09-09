@@ -150,6 +150,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1c8c54e04fc10f0479ed36adbb7ef8c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fcc9adc72b16cbf4dbddcfcb88bccd99, type: 2}
     - target: {fileID: 919132149155446097, guid: 1c8c54e04fc10f0479ed36adbb7ef8c8, type: 3}
       propertyPath: m_Name
       value: Turtle
