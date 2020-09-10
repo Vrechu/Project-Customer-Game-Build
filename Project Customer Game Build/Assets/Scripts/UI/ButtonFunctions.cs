@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonFunctions : MonoBehaviour
 {
+
     void Awake()
     {
 
@@ -41,8 +44,24 @@ public class ButtonFunctions : MonoBehaviour
         Application.Quit();
     }
 
+    /// <summary>
+    /// Opens the in-game menu.
+    /// </summary>
+    public void OpenMenu()
+    {
+        ManageInGameMenu.OpenMenu();
+    }
+
+    /// <summary>
+    /// Closes the in-game menu.
+    /// </summary>
     public void CloseMenu()
     {
+        ManageInGameMenu.CloseMenu();
+    }
 
+    public void RestartScene()
+    {
+        ManageScenes.ReloadScene();      
     }
 }

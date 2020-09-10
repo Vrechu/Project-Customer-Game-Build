@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class ManageScenes : MonoBehaviour
 {
     public static bool IsThisSceneMenu = true;
+    public static event Action OnSceneLoad;
 
     void Awake()
     {
+        SceneManager.sceneLoaded += SceneLoaded;
     }
 
     void OnDestroy()
@@ -34,6 +36,12 @@ public class ManageScenes : MonoBehaviour
         SceneManager.LoadScene(sceneName);        
     }
     
+    public static void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
     /// <summary>
     /// Checks if scene has a player in it.
     /// </summary>
@@ -48,6 +56,11 @@ public class ManageScenes : MonoBehaviour
         {
             return true;
         } 
+    }
+
+    void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        OnSceneLoad?.Invoke();
     }
 }
 

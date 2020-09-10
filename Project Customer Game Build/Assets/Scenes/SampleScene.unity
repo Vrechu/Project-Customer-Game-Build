@@ -178,10 +178,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7467248183800585701, guid: 95195a54a16c551408afbae2b6e3537e, type: 3}
-      propertyPath: IsSpeedBoostPickedUp
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95195a54a16c551408afbae2b6e3537e, type: 3}
 --- !u!1001 &372270201
@@ -957,10 +953,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5170524705761800356, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 4219285379463595068, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
+      propertyPath: Menu
+      value: 
+      objectReference: {fileID: 9060291772596491275, guid: a24218786d71b654eae9c2ece886a1c9, type: 3}
     - target: {fileID: 8634174776175625042, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

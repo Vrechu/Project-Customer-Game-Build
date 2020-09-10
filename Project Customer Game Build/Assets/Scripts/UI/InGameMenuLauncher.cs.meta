@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 0cf532188a246fe4ba5e89e51471b99d
+guid: 1581a4f11aff938428871194ce0a8efa
 labels:
-- Pickup
-- Ui
+- Menu
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
