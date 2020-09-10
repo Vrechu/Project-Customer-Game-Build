@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4575613691312466868}
   - component: {fileID: 5200077073786413897}
   - component: {fileID: 536264148}
+  - component: {fileID: 2318082214907598039}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Untagged
@@ -87,6 +88,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &536264148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8316007531139331591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a23b613435e3334f913c5800318b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreWorth: 10
+--- !u!114 &2318082214907598039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

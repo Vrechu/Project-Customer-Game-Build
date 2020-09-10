@@ -9,18 +9,24 @@ public class ManagePickups : MonoBehaviour
     public static float boostAmount = 0;
     float maxBoostAmount = 180;
 
-
     public static event Action OnSpeedBoostEquip;
     public static event Action OnSpeedBoostUnequip;
+
+    static bool isPLayerShielded = false;
+    public static event Action OnShieldEquip;
+    public static event Action OnShieldUnequip;
+
 
     private void Awake()
     {
         GainSpeedBoostOnPickup.OnSpeedBoostPickup += EquipSpeedBoost;
+        GainShieldOnPickup.OnShieldPickup += EquipShield;
     }
 
     private void OnDestroy()
     {
         GainSpeedBoostOnPickup.OnSpeedBoostPickup -= EquipSpeedBoost;
+        GainShieldOnPickup.OnShieldPickup -= EquipShield;
     }
 
     void Start()
@@ -87,6 +93,31 @@ public class ManagePickups : MonoBehaviour
             && boostAmount < 0)
         {
             UnequipSpeedBoost();
+        }
+    }
+
+    /// <summary>
+    /// Equips player shield.
+    /// </summary>
+    void EquipShield()
+    {
+        IsPLayerShielded = true;
+    }
+
+    /// <summary>
+    /// Sends out an event when shields gets picked up or lost. 
+    /// </summary>
+    public static bool IsPLayerShielded
+    {
+        get { return isPLayerShielded; }
+        set
+        {
+            if (value == isPLayerShielded) return;
+            isPLayerShielded = value;
+            if (isPLayerShielded)
+                OnShieldEquip?.Invoke();
+            if (!isPLayerShielded)
+                OnShieldUnequip?.Invoke();
         }
     }
 

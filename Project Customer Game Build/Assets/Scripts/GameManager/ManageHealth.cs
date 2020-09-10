@@ -10,22 +10,18 @@ public class ManageHealth : MonoBehaviour
     public static event Action OnHealthChange;
     public static event Action OnPlayerDeath;
 
-    public bool IsPlayerShielded = false;
-
     private void Awake()
     {
         OnHealthChange += CheckHealth;
         OnPlayerDeath += PlayerDeath;
-        GetHit.OnPLayerHit += CheckIfShielded;
-        GainShieldOnPickup.OnShieldPickup += AddShield;
+        GetHit.OnPLayerHit += CheckIfShielded;        
     }
 
     private void OnDestroy()
     {
         OnHealthChange -= CheckHealth;
         OnPlayerDeath -= PlayerDeath;
-        GetHit.OnPLayerHit -= CheckIfShielded;
-        GainShieldOnPickup.OnShieldPickup -= AddShield;
+        GetHit.OnPLayerHit -= CheckIfShielded;        
     }
 
     void Start()
@@ -44,32 +40,22 @@ public class ManageHealth : MonoBehaviour
     /// <param name="damage"></param>
     void CheckIfShielded(float damage)
     {
-        if (!IsPlayerShielded)
+        if (!ManagePickups.IsPLayerShielded)
         {
             LoseHealth(damage);
         }
-        else if (IsPlayerShielded)
+        else if (ManagePickups.IsPLayerShielded)
         {
             LoseShield();
         }
-    }
-
-    /// <summary>
-    /// Sets IsPLayerShielded to true.
-    /// </summary>
-    void AddShield()
-    {
-        IsPlayerShielded = true;
-        Debug.Log("SHIELDED");
-    }
+    }      
 
     /// <summary>
     /// Sets IsPLayerShielded to false.
     /// </summary>
     void LoseShield()
     {
-        IsPlayerShielded = false;
-        Debug.Log("SHIELD LOST");
+        ManagePickups.IsPLayerShielded = false;        
     }
 
     /// <summary>
@@ -77,10 +63,8 @@ public class ManageHealth : MonoBehaviour
     /// </summary>
     /// <param name="damage"></param>
     void LoseHealth(float damage)
-    {
-        
-            health -= damage;
-        
+    {        
+            health -= damage;        
         OnHealthChange?.Invoke();
     }
 
