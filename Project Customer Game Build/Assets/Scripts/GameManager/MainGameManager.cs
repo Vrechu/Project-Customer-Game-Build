@@ -34,4 +34,20 @@ public class MainGameManager : MonoBehaviour
     void Update()
     {
     }    
+
+    /// <summary>
+    /// Freezes time in game.
+    /// </summary>
+    public static void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    /// <summary>
+    /// Unfreezes time in game.
+    /// </summary>
+    public static void UnpauseGame()
+    {
+        Time.timeScale = 1;
+    }
 }

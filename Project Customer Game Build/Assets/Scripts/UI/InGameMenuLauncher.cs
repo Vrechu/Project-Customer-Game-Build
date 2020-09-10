@@ -31,6 +31,7 @@ public class InGameMenuLauncher : MonoBehaviour
     /// </summary>
     void CloseMenu()
     {
-        Destroy(menu);
+        if (menu != null)
+            Destroy(menu);
     }
 }

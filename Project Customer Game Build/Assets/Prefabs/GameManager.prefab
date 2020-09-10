@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b7e1fc634952194fad1b1a1867dabfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  textScore: 10
 --- !u!114 &1511249464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1f2955abdbdd642b34937a14c644b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 3
   health: 3
-  IsPlayerShielded: 0
 --- !u!114 &7467248183800585701
 MonoBehaviour:
   m_ObjectHideFlags: 0

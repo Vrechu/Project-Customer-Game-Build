@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8349145782552783656}
   - component: {fileID: 5176984560464578607}
   - component: {fileID: 5905026342679431127}
+  - component: {fileID: 6487992870936356816}
   m_Layer: 0
   m_Name: Dolphin
   m_TagString: Untagged
@@ -72,6 +73,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 363852e5b325fec4f984fcc600de981b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6487992870936356816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635075782871897620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a23b613435e3334f913c5800318b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreWorth: 10
 --- !u!1001 &8402045224525786970
 PrefabInstance:
   m_ObjectHideFlags: 0

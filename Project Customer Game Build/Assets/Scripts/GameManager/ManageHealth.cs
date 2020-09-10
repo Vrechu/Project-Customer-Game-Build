@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ManageHealth : MonoBehaviour
 {
-    public float health = 3;
+    public float startingHealth = 3;
+    public static float health = 3;
 
     public static event Action OnHealthChange;
     public static event Action OnPlayerDeath;
@@ -14,14 +15,16 @@ public class ManageHealth : MonoBehaviour
     {
         OnHealthChange += CheckHealth;
         OnPlayerDeath += PlayerDeath;
-        GetHit.OnPLayerHit += CheckIfShielded;        
+        GetHit.OnPLayerHit += CheckIfShielded;
+        ManageScenes.OnSceneLoad += ResetHealth;
     }
 
     private void OnDestroy()
     {
         OnHealthChange -= CheckHealth;
         OnPlayerDeath -= PlayerDeath;
-        GetHit.OnPLayerHit -= CheckIfShielded;        
+        GetHit.OnPLayerHit -= CheckIfShielded;
+        ManageScenes.OnSceneLoad -= ResetHealth;
     }
 
     void Start()
@@ -87,5 +90,10 @@ public class ManageHealth : MonoBehaviour
     {
         Debug.Log("Game Over");
         ManageScenes.ChangeScene("Menu");
+    }
+
+    void ResetHealth()
+    {
+        health = startingHealth;
     }
 }

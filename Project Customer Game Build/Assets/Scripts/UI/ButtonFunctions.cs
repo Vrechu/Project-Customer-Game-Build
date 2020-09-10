@@ -64,4 +64,9 @@ public class ButtonFunctions : MonoBehaviour
     {
         ManageScenes.ReloadScene();      
     }
+
+    public void CloseTextWindow()
+    {
+        TextWindowUI.CloseTextWindow();
+    }
 }

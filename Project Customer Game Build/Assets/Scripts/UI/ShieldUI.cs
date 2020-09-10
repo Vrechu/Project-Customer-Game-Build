@@ -25,6 +25,7 @@ public class ShieldUI : MonoBehaviour
 
     void RemoveShieldUI()
     {
+        if (shieldSprite != null)
         Destroy(shieldSprite);
     }
 }

@@ -23,7 +23,7 @@ public class ManageInGameMenu : MonoBehaviour
         ManageScenes.OnSceneLoad -= CloseMenu;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         OpenMenuInput();
     }
@@ -35,7 +35,7 @@ public class ManageInGameMenu : MonoBehaviour
     {
         IsMenuOpen = true;
     }
-    
+
     /// <summary>
     /// Sets is menu open bool to false.
     /// </summary>
@@ -57,12 +57,12 @@ public class ManageInGameMenu : MonoBehaviour
             if (isMenuOpen)
             {
                 OnInGameMenuOpen?.Invoke();
-                PauseGame();
+                MainGameManager.PauseGame();
             }
-            if(!isMenuOpen)
+            if (!isMenuOpen)
             {
                 OnInGameMenuClose?.Invoke();
-                PauseGame();
+                MainGameManager.UnpauseGame();
             }
         }
     }
@@ -73,28 +73,16 @@ public class ManageInGameMenu : MonoBehaviour
     void OpenMenuInput()
     {
         if (Input.GetAxis("Cancel") != 0)
-        {            
+        {
             if (!isMenuOpen && !isMenuKeyPressed)
             {
                 isMenuKeyPressed = true;
                 OpenMenu();
-            }
-            if (isMenuOpen && !isMenuKeyPressed)
-            {
-                isMenuKeyPressed = true;
-                CloseMenu();
-            }
+            }            
         }
         if (Input.GetAxis("Cancel") == 0)
+        {
             isMenuKeyPressed = false;
-    }
-
-    /// <summary>
-    /// Stops and starts time when menu is open and closed.
-    /// </summary>
-    static void PauseGame()
-    {
-        if (isMenuOpen)Time.timeScale = 0;
-        if (!isMenuOpen) Time.timeScale = 1;
+        }
     }
 }

@@ -6,20 +6,23 @@ using UnityEngine;
 public class ManageScore : MonoBehaviour
 {
     public static event Action OnScoreChange;
+    public static event Action OnTextScoreReached;
 
-    public float score = 0;
-    
+    public static float score = 0;
+    public float textScore = 30;
     
     void Awake()
     {
         OnScoreChange += CheckScore;
         GainScoreOnPickup.OnScorePickup += AddScore;
+        ManageScenes.OnSceneLoad += ResetScore;
     }
 
     void OnDestroy()
     {
         OnScoreChange -= CheckScore;
         GainScoreOnPickup.OnScorePickup -= AddScore;
+        ManageScenes.OnSceneLoad -= ResetScore;
     }
 
     void Start()
@@ -47,5 +50,16 @@ public class ManageScore : MonoBehaviour
     void CheckScore()
     {
         Debug.Log("Score: " + score);
+        if (score >= textScore)
+        {
+            score = (score - textScore) * -1;
+            OnTextScoreReached?.Invoke();            
+        }
     }
+
+    void ResetScore()
+    {
+        score = 0;
+    }
+    
 }

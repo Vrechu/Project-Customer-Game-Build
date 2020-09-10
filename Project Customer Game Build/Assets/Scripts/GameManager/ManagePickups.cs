@@ -21,12 +21,14 @@ public class ManagePickups : MonoBehaviour
     {
         GainSpeedBoostOnPickup.OnSpeedBoostPickup += EquipSpeedBoost;
         GainShieldOnPickup.OnShieldPickup += EquipShield;
+        ManageScenes.OnSceneLoad += ResetPickups;
     }
 
     private void OnDestroy()
     {
         GainSpeedBoostOnPickup.OnSpeedBoostPickup -= EquipSpeedBoost;
         GainShieldOnPickup.OnShieldPickup -= EquipShield;
+        ManageScenes.OnSceneLoad -= ResetPickups;
     }
 
     void Start()
@@ -121,4 +123,9 @@ public class ManagePickups : MonoBehaviour
         }
     }
 
+    void ResetPickups()
+    {
+        IsSpeedBoostPickedUp = false;
+        IsPLayerShielded = false;
+    }
 }

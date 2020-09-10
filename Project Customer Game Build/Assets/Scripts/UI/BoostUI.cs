@@ -25,6 +25,7 @@ public class BoostUI : MonoBehaviour
 
     void RemoveBoostUI()
     {
-        Destroy(boostSprite);
+        if (boostSprite != null)
+            Destroy(boostSprite);
     }
 }
