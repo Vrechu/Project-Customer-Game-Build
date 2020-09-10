@@ -32,4 +32,17 @@ public class ButtonFunctions : MonoBehaviour
     {
         ManageScenes.ChangeScene(sceneName);
     }
+
+    /// <summary>
+    /// Closes the game.
+    /// </summary>
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void CloseMenu()
+    {
+
+    }
 }

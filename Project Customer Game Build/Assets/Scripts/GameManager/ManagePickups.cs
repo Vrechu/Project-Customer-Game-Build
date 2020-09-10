@@ -6,7 +6,7 @@ using UnityEngine;
 public class ManagePickups : MonoBehaviour
 {
     bool isSpeedBoostPickedUp = false;
-    static float boostAmount = 0;
+    public static float boostAmount = 0;
     float maxBoostAmount = 180;
 
 
