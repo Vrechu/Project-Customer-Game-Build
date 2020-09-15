@@ -7,7 +7,7 @@ public class ManagePickups : MonoBehaviour
 {
     bool isSpeedBoostPickedUp = false;
     public static float boostAmount = 0;
-    float maxBoostAmount = 180;
+    public static float maxBoostAmount = 180;
 
     public static event Action OnSpeedBoostEquip;
     public static event Action OnSpeedBoostUnequip;

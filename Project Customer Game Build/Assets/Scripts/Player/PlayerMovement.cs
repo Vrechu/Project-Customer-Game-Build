@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
-{  
+{
     public float normalAcceleration = 500;
     public float rotationSpeed = 50;
 
@@ -35,10 +35,10 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         acceleration = normalAcceleration;
-        backwardsAcceleration = normalAcceleration/3;
+        backwardsAcceleration = normalAcceleration / 3;
         yAngle = transform.rotation.eulerAngles.y;
     }
-    
+
     void FixedUpdate()
     {
         SetKeys();
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             playerRB.AddForce(transform.forward * forward * acceleration * Time.fixedDeltaTime);
         else if (forward == -1)
             playerRB.AddForce(transform.forward * forward * backwardsAcceleration * Time.fixedDeltaTime);
-    }    
+    }
 
     /// <summary>
     /// Sets the Y angle of the player using the sideways input float value.
@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
     void TurnPlayer()
     {
         yAngle += sideways;
-        transform.rotation = Quaternion.Euler(0, yAngle , 0);
+        transform.rotation = Quaternion.Euler(0, yAngle, 0);
     }
 
     /// <summary>
@@ -114,5 +114,4 @@ public class PlayerMovement : MonoBehaviour
         else if (!SpeedBoostEquipped)
             acceleration = normalAcceleration;
     }
-    
 }
