@@ -157,10 +157,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 13d811829ab1c064299f291932f96603, type: 3}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -168,13 +168,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'text
-
-    text
-
-    text
-
-    text'
+  m_Text: "Did you know: \nPlastic pollutions harm marine habitats, which directly
+    threaten dolphins\r\nand their ability to traverse in the water."
 --- !u!1001 &4008172509074932949
 PrefabInstance:
   m_ObjectHideFlags: 0
