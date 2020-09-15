@@ -9,12 +9,16 @@ public class ManageScore : MonoBehaviour
     public static event Action OnTextScoreReached;
 
     public static float score = 0;
+    public static float turtlesSaved = 0;
+    public static float dolphinsSaved = 0;
     public float textScore = 30;
     
     void Awake()
     {
         OnScoreChange += CheckScore;
         GainScoreOnPickup.OnScorePickup += AddScore;
+        GainShieldOnPickup.OnShieldPickup += AddTurtle;
+        GainSpeedBoostOnPickup.OnSpeedBoostPickup += AddDolphin;
         ManageScenes.OnSceneLoad += ResetScore;
     }
 
@@ -22,6 +26,8 @@ public class ManageScore : MonoBehaviour
     {
         OnScoreChange -= CheckScore;
         GainScoreOnPickup.OnScorePickup -= AddScore;
+        GainShieldOnPickup.OnShieldPickup -= AddTurtle;
+        GainSpeedBoostOnPickup.OnSpeedBoostPickup -= AddDolphin;
         ManageScenes.OnSceneLoad -= ResetScore;
     }
 
@@ -60,6 +66,18 @@ public class ManageScore : MonoBehaviour
     void ResetScore()
     {
         score = 0;
+        turtlesSaved = 0;
+        dolphinsSaved = 0;
+    }
+
+    void AddTurtle()
+    {
+        turtlesSaved++;
+    }
+
+    void AddDolphin()
+    {
+        dolphinsSaved++;
     }
     
 }
