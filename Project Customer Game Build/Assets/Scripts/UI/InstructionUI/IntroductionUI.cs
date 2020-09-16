@@ -20,17 +20,24 @@ public class IntroductionUI : MonoBehaviour
 
     void ShowIntroductionUI()
     {
+        MainGameManager.PauseGame();
         introSprite = Instantiate(IntroSprite, transform);
     }
 
     void RemoveIntroductionUI()
     {
+        
+        MainGameManager.UnpauseGame();
         if (introSprite != null)
+        {
             Destroy(introSprite);
+            
+        }
     }
 
     void NextIntro()
     {
+        
         RemoveIntroductionUI();
         ShowUIExplenation();
     }

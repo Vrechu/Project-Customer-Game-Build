@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class ManageScenes : MonoBehaviour
 {
     public static bool IsThisSceneMenu = true;
+    bool hasGameStarted = false;
     public static event Action OnSceneLoad;
     public static event Action OnGameStart;
     public static event Action OnIntroNextWindow;
@@ -76,9 +77,16 @@ public class ManageScenes : MonoBehaviour
 
     void CheckIfGameStart()
     {
-        if (DoesSceneHavePlayer())
+        if (!hasGameStarted
+            && DoesSceneHavePlayer())
         {
-            OnGameStart?.Invoke();
+            hasGameStarted = true;
+            OnGameStart?.Invoke();            
+        }
+        else if ( hasGameStarted 
+            && !DoesSceneHavePlayer())
+        {
+            hasGameStarted = false;
         }
     }
 }

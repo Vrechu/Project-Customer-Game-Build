@@ -6798,26 +6798,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5361342261705536135, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
-      propertyPath: triggerScore1
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5361342261705536135, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
-      propertyPath: triggerScore2
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5361342261705536135, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
-      propertyPath: triggerScore3
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5361342261705536135, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
-      propertyPath: triggerScore4
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5361342261705536135, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
-      propertyPath: triggerScore5
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 8634174776175625042, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

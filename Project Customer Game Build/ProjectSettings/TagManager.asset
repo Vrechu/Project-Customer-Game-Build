@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Monster
   - GameManager
+  - IntroWindow
   layers:
   - Default
   - TransparentFX

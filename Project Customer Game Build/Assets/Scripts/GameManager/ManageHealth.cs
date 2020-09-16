@@ -80,7 +80,6 @@ public class ManageHealth : MonoBehaviour
         {
             OnPlayerDeath?.Invoke();
         }
-        else Debug.Log("Health: " + health);
     }
 
     /// <summary>
