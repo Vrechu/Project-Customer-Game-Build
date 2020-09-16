@@ -6,27 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class ButtonFunctions : MonoBehaviour
 {
-
-    void Awake()
-    {
-
-    }
-
-    void OnDestroy()
-    {
-
-    }
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
     /// <summary>
     /// Calls the loadScene method from the scene manager.
     /// </summary>
@@ -69,4 +48,10 @@ public class ButtonFunctions : MonoBehaviour
     {
         TextWindowUI.CloseTextWindow();
     }
+
+    public void NextIntroWindow()
+    {
+        ManageScenes.NextIntroWindowEvent();
+    }
+        
 }

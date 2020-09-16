@@ -8,14 +8,20 @@ public class ManageScenes : MonoBehaviour
 {
     public static bool IsThisSceneMenu = true;
     public static event Action OnSceneLoad;
+    public static event Action OnGameStart;
+    public static event Action OnIntroNextWindow;
+    
 
     void Awake()
     {
         SceneManager.sceneLoaded += SceneLoaded;
+        OnSceneLoad += CheckIfGameStart;
     }
 
     void OnDestroy()
     {
+        SceneManager.sceneLoaded -= SceneLoaded;
+        OnSceneLoad -= CheckIfGameStart;
     }
 
     void Start()
@@ -58,9 +64,22 @@ public class ManageScenes : MonoBehaviour
         } 
     }
 
+    public static void NextIntroWindowEvent()
+    {
+        OnIntroNextWindow?.Invoke();
+    }
+
     void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
         OnSceneLoad?.Invoke();
+    }
+
+    void CheckIfGameStart()
+    {
+        if (DoesSceneHavePlayer())
+        {
+            OnGameStart?.Invoke();
+        }
     }
 }
 
