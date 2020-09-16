@@ -57,8 +57,7 @@ public class ManageScore : MonoBehaviour
     {
         Debug.Log("Score: " + score);
         if (score >= textScore)
-        {
-            score = (score - textScore) * -1;
+        {            
             OnTextScoreReached?.Invoke();            
         }
     }
