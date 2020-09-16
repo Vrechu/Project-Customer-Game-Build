@@ -11,11 +11,12 @@ public class ManageScore : MonoBehaviour
     public static float score = 0;
     public static float turtlesSaved = 0;
     public static float dolphinsSaved = 0;
-    public float textScore = 30;
+    float textScore = 0;
+    public float TextWindowScoreInterval = 5;
     
     void Awake()
     {
-        OnScoreChange += CheckScore;
+        OnScoreChange += CheckTextScore;
         GainScoreOnPickup.OnScorePickup += AddScore;
         GainShieldOnPickup.OnShieldPickup += AddTurtle;
         GainSpeedBoostOnPickup.OnSpeedBoostPickup += AddDolphin;
@@ -24,7 +25,7 @@ public class ManageScore : MonoBehaviour
 
     void OnDestroy()
     {
-        OnScoreChange -= CheckScore;
+        OnScoreChange -= CheckTextScore;
         GainScoreOnPickup.OnScorePickup -= AddScore;
         GainShieldOnPickup.OnShieldPickup -= AddTurtle;
         GainSpeedBoostOnPickup.OnSpeedBoostPickup -= AddDolphin;
@@ -33,7 +34,6 @@ public class ManageScore : MonoBehaviour
 
     void Start()
     {
-        CheckScore();
     }
 
     void Update()
@@ -53,13 +53,14 @@ public class ManageScore : MonoBehaviour
     /// <summary>
     /// Prints the current score.
     /// </summary>
-    void CheckScore()
+    void CheckTextScore()
     {
-        Debug.Log("Score: " + score);
-        if (score >= textScore)
-        {            
-            OnTextScoreReached?.Invoke();            
-        }
+        textScore++;
+        if (textScore == TextWindowScoreInterval)
+        {
+            textScore = 0;
+            OnTextScoreReached?.Invoke();
+        }        
     }
 
     void ResetScore()

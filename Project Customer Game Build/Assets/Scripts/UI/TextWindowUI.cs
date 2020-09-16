@@ -10,6 +10,7 @@ public class TextWindowUI : MonoBehaviour
 
     public GameObject TextWindow;
     static GameObject textWindow;
+    
 
     static bool isTextWindowOpen;
 

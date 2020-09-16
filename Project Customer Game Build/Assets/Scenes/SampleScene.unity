@@ -6284,7 +6284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5004997270179404711, guid: 95195a54a16c551408afbae2b6e3537e, type: 3}
       propertyPath: textScore
-      value: 5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004997270179404711, guid: 95195a54a16c551408afbae2b6e3537e, type: 3}
+      propertyPath: TextWindowScoreInterval
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7450945723312971024, guid: 95195a54a16c551408afbae2b6e3537e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6793,6 +6797,26 @@ PrefabInstance:
     - target: {fileID: 4540847825246924128, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361342261705536135, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
+      propertyPath: triggerScore1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361342261705536135, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
+      propertyPath: triggerScore2
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361342261705536135, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
+      propertyPath: triggerScore3
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361342261705536135, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
+      propertyPath: triggerScore4
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361342261705536135, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
+      propertyPath: triggerScore5
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8634174776175625042, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
       propertyPath: m_LocalPosition.x
