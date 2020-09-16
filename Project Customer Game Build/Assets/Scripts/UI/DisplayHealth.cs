@@ -15,6 +15,6 @@ public class DisplayHealth : MonoBehaviour
     /// </summary>
     void UpdateUI()
     {
-        GetComponent<Text>().text = "" + ManageScore.turtlesSaved;
+        GetComponent<Text>().text = "" + ManageHealth.health;
     }
 }

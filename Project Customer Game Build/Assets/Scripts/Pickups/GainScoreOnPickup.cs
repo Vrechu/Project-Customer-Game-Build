@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GainScoreOnPickup : MonoBehaviour
 {
-    public int scoreWorth = 10;
+    public int scoreWorth = 1;
 
     public static event Action<float> OnScorePickup;
 

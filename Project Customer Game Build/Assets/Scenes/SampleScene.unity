@@ -78799,8 +78799,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5654820558707041835, guid: 8b92f73018ed39c4ea2b7ff228386073, type: 3}
-      propertyPath: m_Enabled
+    - target: {fileID: 5877848348383031760, guid: 8b92f73018ed39c4ea2b7ff228386073, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f085b217de3995a4983e1d0087738a30, type: 3}
+    - target: {fileID: 5877848348383031760, guid: 8b92f73018ed39c4ea2b7ff228386073, type: 3}
+      propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7989732273239264141, guid: 8b92f73018ed39c4ea2b7ff228386073, type: 3}
