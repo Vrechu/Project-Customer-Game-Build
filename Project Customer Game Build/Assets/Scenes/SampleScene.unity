@@ -76351,6 +76351,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 7357274634218035048, guid: e88863bbdb2570046bc22e9194393ac5, type: 3}
+      propertyPath: acceleration
+      value: 1.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357274634218035048, guid: e88863bbdb2570046bc22e9194393ac5, type: 3}
+      propertyPath: turnSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e88863bbdb2570046bc22e9194393ac5, type: 3}
 --- !u!1 &1722992599
