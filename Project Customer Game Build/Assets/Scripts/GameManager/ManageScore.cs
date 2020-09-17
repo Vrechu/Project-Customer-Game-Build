@@ -7,8 +7,10 @@ public class ManageScore : MonoBehaviour
 {
     public static event Action OnScoreChange;
     public static event Action OnTextScoreReached;
+    public static event Action OnAllTrashCollected;
 
     public static float score = 0;
+    public static float totalScore;
     public static float turtlesSaved = 0;
     public static float dolphinsSaved = 0;
     float textScore = 0;
@@ -18,15 +20,18 @@ public class ManageScore : MonoBehaviour
     {
         OnScoreChange += CheckTextScore;
         GainScoreOnPickup.OnScorePickup += AddScore;
+        GainScoreOnPickup.OnScorePickup += CheckWinScore;
         GainShieldOnPickup.OnShieldPickup += AddTurtle;
         GainSpeedBoostOnPickup.OnSpeedBoostPickup += AddDolphin;
         ManageScenes.OnSceneLoad += ResetScore;
+        ManageScenes.OnGameStart += ResetScore;
     }
 
     void OnDestroy()
     {
         OnScoreChange -= CheckTextScore;
         GainScoreOnPickup.OnScorePickup -= AddScore;
+        GainScoreOnPickup.OnScorePickup -= CheckWinScore;
         GainShieldOnPickup.OnShieldPickup -= AddTurtle;
         GainSpeedBoostOnPickup.OnSpeedBoostPickup -= AddDolphin;
         ManageScenes.OnSceneLoad -= ResetScore;
@@ -34,6 +39,7 @@ public class ManageScore : MonoBehaviour
 
     void Start()
     {
+        totalScore = GameObject.FindGameObjectsWithTag("ScoreObject").Length;
     }
 
     void Update()
@@ -78,6 +84,18 @@ public class ManageScore : MonoBehaviour
     void AddDolphin()
     {
         dolphinsSaved++;
-    }
+    }  
     
+    void CheckWinScore(float score)
+    {
+        if (score >= totalScore)
+        {
+            OnAllTrashCollected?.Invoke();
+        }
+    }
+
+    void CountTotalScore()
+    {
+
+    }
 }

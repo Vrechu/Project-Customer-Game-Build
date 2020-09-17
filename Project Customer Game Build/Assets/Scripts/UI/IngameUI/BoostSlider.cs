@@ -7,9 +7,19 @@ public class BoostSlider : MonoBehaviour
 {
     public Slider slider;
 
+    private void Awake()
+    {
+        ManageScenes.OnGameStart += SetMaxBoost;
+    }
+
+    private void OnDestroy()
+    {
+        ManageScenes.OnGameStart -= SetMaxBoost;
+    }
+
     private void Start()
     {
-        SetMaxBoost();
+        /*SetMaxBoost();*/
     }
 
     private void FixedUpdate()

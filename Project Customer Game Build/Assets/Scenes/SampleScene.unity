@@ -7556,30 +7556,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: InGameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 8951304976383068953, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8951304976383068953, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ef7a6ec9747a834d929433a69cedb75, type: 3}
---- !u!1 &390516165 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4306648511970004555, guid: c330726354bbf5943a0570a8ef5d000d, type: 3}
-  m_PrefabInstance: {fileID: 4306648513321356681}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &390516170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390516165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb672401d7dd4b7497ffbb19652912a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dimension: 10
-  UVScale: 2
-  Octaves: []
-  MeshFilter: {fileID: 0}
-  Mesh: {fileID: 0}
 --- !u!1 &393350454
 GameObject:
   m_ObjectHideFlags: 0
