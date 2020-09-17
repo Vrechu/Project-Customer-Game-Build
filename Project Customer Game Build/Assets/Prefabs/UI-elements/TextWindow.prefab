@@ -183,16 +183,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916cfb8085a9aba44af6fdc63131af67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName1: text1
+  fileName1: Fact1
   triggerScore1: 3
-  fileName2: text2
+  fileName2: Fact2
   triggerScore2: 6
-  fileName3: text3
+  fileName3: Fact3
   triggerScore3: 9
-  fileName4: text4
+  fileName4: Fact4
   triggerScore4: 12
-  fileName5: text5
+  fileName5: Fact5
   triggerScore5: 15
+  fileName6: Fact6
+  triggerScore6: 18
+  fileName7: Fact7
+  triggerScore7: 21
 --- !u!1001 &4008172509074932949
 PrefabInstance:
   m_ObjectHideFlags: 0

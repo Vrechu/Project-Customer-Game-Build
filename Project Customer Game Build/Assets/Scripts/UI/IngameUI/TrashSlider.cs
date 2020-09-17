@@ -19,14 +19,11 @@ public class TrashSlider : MonoBehaviour
     void SetMaxScore()
     {
         slider.maxValue = ManageScore.totalScore;
-        Debug.Log("max slider value: " + ManageScore.totalScore);
     }
 
     void UpdateUI()
     {
         slider.value = reversedScore;
-        Debug.Log("slider value: " + slider.value);
-        Debug.Log("score: " + reversedScore);
     }
 
     void ReverseScore()

@@ -7,15 +7,19 @@ using UnityEngine.UI;
 public class TextLoader : MonoBehaviour
 {
     public string fileName1;
-    public float triggerScore1 = 5;
+    public float triggerScore1 = 3;
     public string fileName2;
-    public float triggerScore2 = 10;
+    public float triggerScore2 = 6;
     public string fileName3;
-    public float triggerScore3 = 15;
+    public float triggerScore3 = 9;
     public string fileName4;
-    public float triggerScore4 = 20;
+    public float triggerScore4 = 12;
     public string fileName5;
-    public float triggerScore5 = 25;
+    public float triggerScore5 = 15;
+    public string fileName6;
+    public float triggerScore6 = 18;
+    public string fileName7;
+    public float triggerScore7 = 21;
 
     TextAsset loadedText;
 
@@ -41,7 +45,11 @@ public class TextLoader : MonoBehaviour
         else if (ManageScore.score <= triggerScore4)
             loadedText = (TextAsset)Resources.Load(fileName4);
         else if (ManageScore.score <= triggerScore5)
-            loadedText = (TextAsset)Resources.Load(fileName5);        
+            loadedText = (TextAsset)Resources.Load(fileName5);
+        else if (ManageScore.score <= triggerScore6)
+            loadedText = (TextAsset)Resources.Load(fileName6);
+        else if (ManageScore.score <= triggerScore7)
+            loadedText = (TextAsset)Resources.Load(fileName7);
     }
     void UpdateUI()
     {
