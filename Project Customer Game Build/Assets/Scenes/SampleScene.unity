@@ -528,6 +528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dolphin (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5635075782871897620, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6487992870936356816, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
       propertyPath: scoreWorth
       value: 1
@@ -883,6 +887,10 @@ PrefabInstance:
     - target: {fileID: 3130831600546612586, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
       propertyPath: m_Name
       value: Bottle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130831600546612586, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5192296034667748018, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7315,6 +7323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dolphin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5635075782871897620, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6487992870936356816, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
       propertyPath: scoreWorth
       value: 1
@@ -8263,6 +8275,10 @@ PrefabInstance:
     - target: {fileID: 8316007531139331591, guid: 7522efe25a2ef274296e866c0c832ebe, type: 3}
       propertyPath: m_Name
       value: Friend (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316007531139331591, guid: 7522efe25a2ef274296e866c0c832ebe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7522efe25a2ef274296e866c0c832ebe, type: 3}
@@ -18363,6 +18379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3130831600546612586, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5192296034667748018, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
       propertyPath: m_LocalPosition.x
       value: -118.09999
@@ -19034,6 +19054,10 @@ PrefabInstance:
     - target: {fileID: 8316007531139331591, guid: 7522efe25a2ef274296e866c0c832ebe, type: 3}
       propertyPath: m_Name
       value: Friend
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316007531139331591, guid: 7522efe25a2ef274296e866c0c832ebe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7522efe25a2ef274296e866c0c832ebe, type: 3}
@@ -24241,6 +24265,10 @@ PrefabInstance:
     - target: {fileID: 5635075782871897620, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
       propertyPath: m_Name
       value: Dolphin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635075782871897620, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487992870936356816, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
       propertyPath: scoreWorth
@@ -44605,6 +44633,10 @@ PrefabInstance:
     - target: {fileID: 3130831600546612586, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
       propertyPath: m_Name
       value: Bottle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130831600546612586, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5192296034667748018, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
       propertyPath: m_LocalPosition.x
@@ -75323,6 +75355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dolphin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5635075782871897620, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6487992870936356816, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
       propertyPath: scoreWorth
       value: 1
@@ -75846,6 +75882,10 @@ PrefabInstance:
     - target: {fileID: 5635075782871897620, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
       propertyPath: m_Name
       value: Dolphin (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635075782871897620, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487992870936356816, guid: 375fb2071ea0cad44bcf804d5e1b3525, type: 3}
       propertyPath: scoreWorth
@@ -91240,6 +91280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Friend (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8316007531139331591, guid: 7522efe25a2ef274296e866c0c832ebe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7522efe25a2ef274296e866c0c832ebe, type: 3}
 --- !u!1 &1845774909
@@ -91469,6 +91513,10 @@ PrefabInstance:
     - target: {fileID: 3130831600546612586, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
       propertyPath: m_Name
       value: Bottle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130831600546612586, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5192296034667748018, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
       propertyPath: m_LocalPosition.x
@@ -91763,6 +91811,10 @@ PrefabInstance:
     - target: {fileID: 8316007531139331591, guid: 7522efe25a2ef274296e866c0c832ebe, type: 3}
       propertyPath: m_Name
       value: Friend (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316007531139331591, guid: 7522efe25a2ef274296e866c0c832ebe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7522efe25a2ef274296e866c0c832ebe, type: 3}
@@ -97223,6 +97275,10 @@ PrefabInstance:
     - target: {fileID: 3130831600546612586, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
       propertyPath: m_Name
       value: Bottle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130831600546612586, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5192296034667748018, guid: 640b63a2ad2e7fb42b4cd01a88657394, type: 3}
       propertyPath: m_LocalPosition.x

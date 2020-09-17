@@ -14,7 +14,6 @@ public class ManageHealth : MonoBehaviour
     private void Awake()
     {
         OnHealthChange += CheckHealth;
-        OnPlayerDeath += PlayerDeath;
         GetHit.OnPLayerHit += CheckIfShielded;
         ManageScenes.OnSceneLoad += ResetHealth;
     }
@@ -22,7 +21,6 @@ public class ManageHealth : MonoBehaviour
     private void OnDestroy()
     {
         OnHealthChange -= CheckHealth;
-        OnPlayerDeath -= PlayerDeath;
         GetHit.OnPLayerHit -= CheckIfShielded;
         ManageScenes.OnSceneLoad -= ResetHealth;
     }
@@ -75,15 +73,6 @@ public class ManageHealth : MonoBehaviour
         {
             OnPlayerDeath?.Invoke();
         }
-    }
-
-    /// <summary>
-    /// Loads the start menu screen on death.
-    /// </summary>
-    void PlayerDeath()
-    {
-        Debug.Log("Game Over");
-        ManageScenes.ChangeScene("Menu");
     }
 
     void ResetHealth()

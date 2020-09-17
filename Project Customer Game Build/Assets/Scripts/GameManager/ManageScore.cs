@@ -92,10 +92,5 @@ public class ManageScore : MonoBehaviour
         {
             OnAllTrashCollected?.Invoke();
         }
-    }
-
-    void CountTotalScore()
-    {
-
-    }
+    }    
 }
