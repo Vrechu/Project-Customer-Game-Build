@@ -10,7 +10,7 @@ public class ManageScenes : MonoBehaviour
     bool hasGameStarted = false;
     public static event Action OnSceneLoad;
     public static event Action OnGameStart;
-    public static event Action OnIntroNextWindow;
+   
     
 
     void Awake()
@@ -63,12 +63,7 @@ public class ManageScenes : MonoBehaviour
         {
             return true;
         } 
-    }
-
-    public static void NextIntroWindowEvent()
-    {
-        OnIntroNextWindow?.Invoke();
-    }
+    }    
 
     void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {

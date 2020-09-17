@@ -49,9 +49,19 @@ public class ButtonFunctions : MonoBehaviour
         TextWindowUI.CloseTextWindow();
     }
 
+    public void OpenIntroWindow()
+    {
+        IntroProgression.OpenIntroWindowEvent();
+    }
+
     public void NextIntroWindow()
     {
-        ManageScenes.NextIntroWindowEvent();
+        IntroProgression.NextIntroWindowEvent();
+    }
+
+    public void FinishIntro()
+    {
+        IntroProgression.CloseIntroWindowEvent();
     }
         
 }

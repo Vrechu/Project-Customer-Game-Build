@@ -32,11 +32,6 @@ public class ManageHealth : MonoBehaviour
         CheckHealth();
     }
 
-    void Update()
-    {
-        
-    }
-
     /// <summary>
     /// Checks Subtracks the damage from playerhealth if not shielded. Removes the shield if shielded.
     /// </summary>

@@ -6,49 +6,52 @@ public class IntroductionUI : MonoBehaviour
 {
     public GameObject IntroSprite;
     GameObject introSprite;
+
+    public GameObject ExplainUI;
+    GameObject explainUI;
     private void Awake()
     {
-        ManageScenes.OnGameStart += ShowIntroductionUI;
-        ManageScenes.OnIntroNextWindow += NextIntro;
+        IntroProgression.OnIntroNextWindow += NextIntro;
+        IntroProgression.OnIntroClose += HideUIExplenation;
+        IntroProgression.OnIntroOpen += ShowIntroductionUI;
     }
     private void OnDestroy()
     {
-        ManageScenes.OnGameStart -= ShowIntroductionUI;
-        ManageScenes.OnIntroNextWindow -= NextIntro;
+        IntroProgression.OnIntroNextWindow -= NextIntro;
+        IntroProgression.OnIntroClose -= HideUIExplenation;
+        IntroProgression.OnIntroOpen -= ShowIntroductionUI;
     }
 
 
     void ShowIntroductionUI()
     {
-        MainGameManager.PauseGame();
         introSprite = Instantiate(IntroSprite, transform);
     }
 
     void RemoveIntroductionUI()
-    {
-        
-        MainGameManager.UnpauseGame();
+    {            
         if (introSprite != null)
         {
-            Destroy(introSprite);
-            
+            Destroy(introSprite);            
         }
     }
 
     void NextIntro()
-    {
-        
+    {       
         RemoveIntroductionUI();
         ShowUIExplenation();
     }
 
     void ShowUIExplenation()
-    {
-
+    {        
+        explainUI = Instantiate(ExplainUI, transform);
     }
 
     void HideUIExplenation()
     {
-
+        if (explainUI != null)
+        {
+            Destroy(explainUI);
+        }
     }
 }
